@@ -11,10 +11,11 @@ export default function HomePg() {
 
   return (
     <>
+    <div className="bg-blue-200 h-full w-full">
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-4">
       {products.map((itme)=>{
         return(
-          <div className="border p-4 rounded-2xl">
+          <div className="border p-4 rounded-2xl bg-white">
             <img src={itme.image} className="h-[50vh] mx-auto"/>
             <h1 className="text-lg">{itme.title}</h1>
             <h2 className="text-md text-green-600">{itme.price}$</h2>
@@ -22,6 +23,7 @@ export default function HomePg() {
           </div>
         );
       })}
+    </div>
     </div>
     </>
   );
